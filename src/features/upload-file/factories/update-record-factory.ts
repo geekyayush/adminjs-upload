@@ -65,7 +65,7 @@ export const updateRecordFactory = (
         const keys = await Promise.all<string>(uploadedFiles.map(async (uploadedFile) => {
           const key = buildRemotePath(record, uploadedFile, uploadPath)
           const customKey = await provider.upload(uploadedFile, key, context)
-          return customKey && typeof customKey === "string" ? customKey : key
+          return customKey && typeof customKey === 'string' ? customKey : key
         }))
 
         let params = flat.set({}, properties.key, [
@@ -114,7 +114,7 @@ export const updateRecordFactory = (
         const customKey = await provider.upload(uploadedFile, key, context)
 
         const params = {
-          [properties.key]: customKey && typeof customKey === "string" ? customKey : key,
+          [properties.key]: customKey && typeof customKey === 'string' ? customKey : key,
           ...properties.bucket && { [properties.bucket]: provider.bucket },
           ...properties.size && { [properties.size]: uploadedFile.size?.toString() },
           ...properties.mimeType && { [properties.mimeType]: uploadedFile.type },
