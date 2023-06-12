@@ -9,7 +9,7 @@
     }
   },
   "private": false,
-  "repository": "git@github.com:SoftwareBrothers/adminjs-upload.git",
+  "repository": "git@github.com:geekyayush/adminjs-upload.git",
   "license": "MIT",
   "scripts": {
     "release": "semantic-release",
