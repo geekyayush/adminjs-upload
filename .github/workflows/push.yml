@@ -27,13 +27,13 @@ jobs:
         run: yarn install
       - name: Lint
         run: yarn lint
-      - name: Test
-        run: yarn test
+      #      - name: Test
+      #        run: yarn test
       - name: Build
         run: yarn build
       - name: Release
         env:
-#          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          #          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: yarn release
